@@ -15,24 +15,30 @@
 
     <script type="text/babel">
 
-        // Aqui vai o código React
-        const Title = <h1>Hello React!</h1>;
-        const Paragraph = <p> Welcome to React Course!</p>;
+        function Greet () {
+
+            return (
+            <>    
+            <h1>Hello, World!</h1>
+            <p> Welcome to React Course!</p>
+            </>
+            );
+        }
 
         const App = () => {
-            return (
+            
                 <>
-                    {Title}
-                    {Paragraph}
+                    <Greet />
+                    
                 </>
-            );
+           
         };
 
         const container = document.querySelector('#container');
 
         const root = ReactDOM.createRoot(container);
 
-        root.render(App());
+        root.render(<App />);
 
     </script>
 </body>
