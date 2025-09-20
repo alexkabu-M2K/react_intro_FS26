@@ -7,7 +7,33 @@
 </head>
 <body>
 
-    <script src="https://alexgeracaotech.github.io/lib/script.js"> </script>
+    <main id="container"></main>
 
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        // Aqui vai o código React
+        const Title = <h1>Hello React!</h1>;
+        const Paragraph = <p> Welcome to React Course!</p>;
+
+        const App = () => {
+            return (
+                <>
+                    {Title}
+                    {Paragraph}
+                </>
+            );
+        };
+
+        const container = document.querySelector('#container');
+
+        const root = ReactDOM.createRoot(container);
+
+        root.render(App());
+
+    </script>
 </body>
 </html>
